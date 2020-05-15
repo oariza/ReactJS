@@ -16,6 +16,12 @@ export default class Counter extends Component {
     clearInterval(this.countInterval);
   }
 
+  componentDidUpdate(){
+    if(this.state.counter === 20){
+      clearInterval(this.countInterval);
+    }
+  }
+
   count() {
     this.setState({
       counter: this.state.counter + 1,
