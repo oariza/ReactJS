@@ -45,7 +45,8 @@
 }
 
 .Card-img{
-  width: 25%;  
+  min-width: 200px;
+  height: 200px;
   background-image: url('https://picsum.photos/id/237/200/300');
   background-repeat: no-repeat;
 }
