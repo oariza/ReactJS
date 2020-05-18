@@ -23,8 +23,9 @@ export default class Counter extends Component {
   }
 
   count() {
+    let { counter } = this.state
     this.setState({
-      counter: this.state.counter + 1,
+      counter: counter + 1,
     });
   }
 
@@ -34,7 +35,7 @@ export default class Counter extends Component {
     }
     return (
       <div>
-        <p>{this.state.counter}</p>
+        <p>Contador: {this.state.counter}</p>
       </div>
     );
   }
