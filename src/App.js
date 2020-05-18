@@ -27,11 +27,8 @@ import './App.css';
 //}
 
 // Components
-import Clock from './components/Clock/Clock'
 import Card from './components/Card/Card'
-import Counter from './components/Counter/Counter'
-import Button from './components/Button'
-import Notes from './components/Notes'
+
 
 const data = [
   {
@@ -92,10 +89,6 @@ export default class App extends Component {
           <h1>
             Bootcamp white - <strong>React</strong>
           </h1>
-          <Clock />
-          <Counter />
-          <Button />
-          <Notes />
         </header>
         <div className='cards-container'>
           {this._renderCards()}
