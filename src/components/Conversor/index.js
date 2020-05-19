@@ -22,7 +22,8 @@ export default class Conversor extends Component {
     const { mexicanCurrencyValue } = this.state
     let usdCurrencyValue = mexicanCurrencyValue * 23.66
     return(      
-      <div className='form-container'>
+      <div className='conversor-container'>
+        <h2>Currency Value Converter Component</h2>
         <input value={mexicanCurrencyValue} onChange={this.handleMXN} placeholder={'MXN'}/>Pesos mexicanos (MXN)
         <p>Dólares estadounidenses (USD): {usdCurrencyValue}</p>
       </div>

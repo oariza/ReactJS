@@ -1,28 +1,39 @@
 import React, { Component } from "react";
 
-
+import "./forms.css";
 
 export default class Forms extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: 'Quokka'
+      firstName: '',
+      lastName: ''
+
     }
-    this.handleInputName = this.handleInputName.bind(this)
+    this.handleInputFirstName = this.handleInputFirstName.bind(this)
+    this.handleInputLastName = this.handleInputLastName.bind(this)
   }
 
-  handleInputName(event) {
+  handleInputFirstName(event) {
     console.log(event.target.value)
     this.setState({
-      name: event.target.value,
+      firstName: event.target.value
+    })
+  }
+
+  handleInputLastName(event) {
+    console.log(event.target.value)
+    this.setState({
+      lastName: event.target.value
     })
   }
   
   render() {
     return(
       <div className='form-container'>
-        <input value={this.state.name} onChange={this.handleInputName} placeholder={'First Name'} />
-        <input placeholder={'Last Name'} />
+        <h2>Form Component</h2>
+        <input value={this.state.firstName} onChange={this.handleInputFirstName} placeholder={'First Name'} />
+        <input value={this.state.lastName} onChange={this.handleInputLastName} placeholder={'Last Name'} />
       </div>
     )
   }

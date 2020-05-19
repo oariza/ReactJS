@@ -1,6 +1,5 @@
 .form-container{
-  padding: 10px;
-  background-color: indigo;
   color: white;
-  
+  border: 1px solid white;
+  padding: 10px
 }

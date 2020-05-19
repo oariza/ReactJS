@@ -25,7 +25,8 @@ export default class ConditionalRendering extends Component {
       square = <div className='colorSquare'></div>
     }
     return(      
-      <div className='container'>
+      <div className='conditionalRendering-container'>
+        <h2>Conditional Rendering</h2>
         {square}
         <button onClick={this.handleClick}>Pushame!!</button>        
       </div>

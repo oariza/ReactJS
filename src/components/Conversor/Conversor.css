@@ -1,6 +1,8 @@
-.form-container{
+.conversor-container{
   padding: 10px;;
   color: white; 
+  margin: 50px;
+  border: 2px solid white;
 }
 
 input {
