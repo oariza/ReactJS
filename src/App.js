@@ -5,9 +5,6 @@ import './App.css';
 // Components
 import Button from './components/Button'
 import Notes from './components/Notes'
-import Forms from './components/Forms'
-import Conversor from './components/Conversor'
-import ConditionalRendering from './components/ConditionalRendering'
 
 export default class App extends Component {
     render () {
@@ -20,9 +17,6 @@ export default class App extends Component {
           </h1>
           <Button />
           <Notes />
-          <Forms />
-          <Conversor />
-          <ConditionalRendering />
         </header>        
       </div>
     )
