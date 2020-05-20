@@ -6,7 +6,9 @@ export default class Conversor extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      mexicanCurrencyValue: 0,
+      mxnCurrencyValue: 0,
+      usdCurrencyValue: 0,
+      eurCurrencyValue: 0,
     }
     this.handleMXN = this.handleMXN.bind(this)
   }
@@ -14,18 +16,21 @@ export default class Conversor extends Component {
   handleMXN(event) {
     console.log(event.target.value)
     this.setState({
-      mexicanCurrencyValue: event.target.value,
+      mxnCurrencyValue: event.target.value,
+      usdCurrencyValue: event.target.value,
+      eurCurrencyValue: event.target.value
     })
   }
   
   render() {
-    const { mexicanCurrencyValue } = this.state
-    let usdCurrencyValue = mexicanCurrencyValue * 23.66
+    const { mxnCurrencyValue, usdCurrencyValue, eurCurrencyValue } = this.state
+
     return(      
       <div className='conversor-container'>
         <h2>Currency Value Converter Component</h2>
-        <input value={mexicanCurrencyValue} onChange={this.handleMXN} placeholder={'MXN'}/>Pesos mexicanos (MXN)
-        <p>Dólares estadounidenses (USD): {usdCurrencyValue}</p>
+        <input value={mxnCurrencyValue} onChange={this.handleMXN} placeholder={'MXN'}/>Pesos mexicanos (MXN)
+        <input value={usdCurrencyValue} onChange={this.handleMXN} placeholder={'MXN'}/>Pesos mexicanos (MXN)
+        <input value={eurCurrencyValue} onChange={this.handleMXN} placeholder={'MXN'}/>Pesos mexicanos (MXN)        
       </div>
     )
   }

@@ -3,9 +3,8 @@ import logo from './Group.svg';
 import './App.css';
 
 // Components
-import Forms from './components/Forms'
 import Conversor from './components/Conversor'
-import ConditionalRendering from './components/ConditionalRendering'
+
 
 export default class App extends Component {
     render () {
@@ -16,9 +15,7 @@ export default class App extends Component {
           <h1>
             Bootcamp white - <strong>React</strong>
           </h1>
-          <Forms />
           <Conversor />
-          <ConditionalRendering />
         </header>        
       </div>
     )
