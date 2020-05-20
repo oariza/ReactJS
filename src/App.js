@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
-import logo from './Group.svg';
-import './App.css';
 
-// Components
-import Forms from './components/Forms'
-import Conversor from './components/Conversor'
-import ConditionalRendering from './components/ConditionalRendering'
+//External Packages
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom"
+
+import Home from './pages/Home'
+import Notes from './pages/Notes'
+import Menu from './pages/Menu'
+
+import "./App.css"
+
 
 export default class App extends Component {
-    render () {
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>
-            Bootcamp white - <strong>React</strong>
-          </h1>
-          <Forms />
-          <Conversor />
-          <ConditionalRendering />
-        </header>        
-      </div>
-    )
+      <Router>
+        <div className="App">
+          <Menu />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/notes">
+              <Notes />
+            </Route>
+            <Route exact path="/holi">
+              <h1>Holi</h1>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
   }
 }
