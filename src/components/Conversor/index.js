@@ -28,8 +28,8 @@ export default class Conversor extends Component {
       <div className='conversor-container'>
         <h2>Currency Value Converter Component</h2>
         <input value={mxnCurrencyValue} onChange={this.handleInput} placeholder={'MXN'} name={"mxnCurrencyValue"}/> Pesos mexicanos (MXN)
-        <input value={usdCurrencyValue.toFixed(2)} onChange={this.handleInput} placeholder={'USD'} name={"usdCurrencyValue"}/> Dólares Estadounidenses (USD)
-        <input value={eurCurrencyValue.toFixed(2)} onChange={this.handleInput} placeholder={'EUR'} name={"eurCurrencyValue"}/> Euros (EUR)
+        <input value={usdCurrencyValue} onChange={this.handleInput} placeholder={'USD'} name={"usdCurrencyValue"}/> Dólares Estadounidenses (USD)
+        <input value={eurCurrencyValue} onChange={this.handleInput} placeholder={'EUR'} name={"eurCurrencyValue"}/> Euros (EUR)
       </div>
     )
   }
