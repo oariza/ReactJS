@@ -32,6 +32,9 @@ export default class Menu extends Component {
                 <li>
                   <Link to="/notes" onClick={this.toggleMenu}>Notas</Link>
                 </li>
+                <li>
+                <Link to="/credit-card" onClick={this.toggleMenu}>Credit Card</Link>
+                </li>
               </ul>
             </div>
           </nav>

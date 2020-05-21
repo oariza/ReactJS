@@ -10,6 +10,7 @@ import {
 import Home from './pages/Home'
 import Notes from './pages/Notes'
 import Menu from './pages/Menu'
+import CreditCard from './pages/CreditCard'
 
 import "./App.css"
 
@@ -27,8 +28,8 @@ export default class App extends Component {
             <Route exact path="/notes">
               <Notes />
             </Route>
-            <Route exact path="/holi">
-              <h1>Holi</h1>
+            <Route exact path="/credit-card">
+              <CreditCard />
             </Route>
           </Switch>
         </div>
