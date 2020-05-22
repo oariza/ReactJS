@@ -39,6 +39,9 @@ export default class Menu extends Component {
                   <Link to="/counter" onClick={this.toggleMenu}>Counter</Link>
                 </li>
                 <li>
+                  <Link to="/button" onClick={this.toggleMenu}>Button</Link>
+                </li>
+                <li>
                   <Link to="/notes" onClick={this.toggleMenu}>Notas</Link>
                 </li>
                 <li>

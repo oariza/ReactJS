@@ -8,11 +8,12 @@ import {
 } from "react-router-dom"
 
 import Home from './pages/Home'
+import Menu from './pages/Menu'
 import Card from './pages/Card'
 import Clock from './pages/Clock'
 import Counter from './pages/Counter'
+import Button from './pages/Button'
 import Notes from './pages/Notes'
-import Menu from './pages/Menu'
 import CreditCard from './pages/CreditCard'
 
 import "./App.css"
@@ -35,6 +36,9 @@ export default class App extends Component {
             </Route>
             <Route exact path="/counter">
               <Counter />
+            </Route>
+            <Route exact path="/button">
+              <Button />
             </Route>
             <Route exact path="/notes">
               <Notes />
