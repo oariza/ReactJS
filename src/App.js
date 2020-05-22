@@ -8,12 +8,12 @@ import {
 } from "react-router-dom"
 
 import Home from './pages/Home'
+import Card from './pages/Card'
 import Notes from './pages/Notes'
 import Menu from './pages/Menu'
 import CreditCard from './pages/CreditCard'
 
 import "./App.css"
-
 
 export default class App extends Component {
   render() {
@@ -25,6 +25,9 @@ export default class App extends Component {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/cards">
+              <Card />
+            </Route>
             <Route exact path="/notes">
               <Notes />
             </Route>
@@ -34,6 +37,6 @@ export default class App extends Component {
           </Switch>
         </div>
       </Router>
-    );
+    )
   }
 }
