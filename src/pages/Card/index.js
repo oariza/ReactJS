@@ -9,27 +9,30 @@ import Card from './components/Card'
 const data = [
   {
     'category':'PROGRAMMING',
-    'title':'8 VS Code Extensions You Might Love',
-    'description':'CodeSnap, GitHub Markdown Preview, Paste JSON as Code, and more',
-    'author':'Marvin Wendt in Better Programming',
-    'publicationDate':'May 4',
-    'readTime':'3 min read',
+    'title':'Learn Basics of React.js in 11 Minutes',
+    'description':'If you are new to React.js this tutorial will give you introduction to all basic concepts in react.',
+    'author':'Madhu Pathy',
+    'publicationDate':'May 29',
+    'readTime':'9 min read',
+    'urlImg':'https://picsum.photos/id/0/367/267'
+  },
+  {
+    'category':'LIFE',
+    'title':'How Sunlight, the Immune System, and Covid-19 Interact',
+    'description':'For thousands of years, humans have recognized that the sun plays a role in the emergence and transmission of viruses',
+    'author':'Markham Heid',
+    'publicationDate':'May 13',
+    'readTime':'10 min read',
+    'urlImg':'https://picsum.photos/id/103/367/267'
   },
   {
     'category':'PROGRAMMING',
-    'title':'Title 2',
-    'description':'CodeSnap, GitHub Markdown Preview, Paste JSON as Code, and more',
-    'author':'Marvin Wendt in Better Programming',
-    'publicationDate':'May 10',
-    'readTime':'5 min read',
-  },
-  {
-    'category':'PROGRAMMING',
-    'title':'Title 3',
-    'description':'CodeSnap, GitHub Markdown Preview, Paste JSON as Code, and more',
-    'author':'Marvin Wendt in Better Programming',
-    'publicationDate':'May 10',
-    'readTime':'5 min read',
+    'title':'I Just Flew. It Was Worse Than I Thought It Would Be.',
+    'description':'The surreal experience of flying during a pandemic, and the false promise of a return to normal',
+    'author':'McKay Coppins',
+    'publicationDate':'May 8',
+    'readTime':'4 min read',
+    'urlImg':'https://picsum.photos/id/1040/367/267'
   }
 ]
 
@@ -42,7 +45,8 @@ export default class Cards extends Component {
       description,
       author,
       publicationDate,
-      readTime
+      readTime,
+      urlImg
     }) => {
       return (
         <Card 
@@ -52,6 +56,7 @@ export default class Cards extends Component {
           author={author}
           publicationDate={publicationDate}
           readTime={readTime}
+          urlImg={urlImg}
         />
       )
     })
@@ -62,9 +67,9 @@ export default class Cards extends Component {
         <div className='Container'>
           <div>
             <Header
-              title={"Credit Card"}
+              title={"Cards"}
               description={
-                "Credit Card Component"
+                "Cards Component"
               }
             />
             {this._renderCards()}

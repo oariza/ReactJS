@@ -2,14 +2,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  max-width: 60%;
   padding: 10px;
+  background-color: white;
 }
 
 .Card-content {
   text-align: left;
   margin: 25px 50px;
   width: 60%;
+  
+
 }
 
 .Card-category{
@@ -23,6 +25,8 @@
   font-size: 20px;
   margin: 0;
   padding: 0;
+  color: black;
+  font-weight: bolder;
 }
 
 .Card-description{
@@ -42,4 +46,11 @@
   font-size: 14px;
   margin-top: 0;
   color: gray;
+}
+
+.Card-img{
+  min-width: 200px;
+  height: 200px;
+  background-image: url('https://picsum.photos/id/0/367/267');
+  background-repeat: no-repeat;
 }
