@@ -9,62 +9,61 @@ export default class NewCreditCard extends Component {
       creditCardNumber: '',
       userName: '',
       expMonth: 0,
-      expYear: 0
+      expYear: 0,
+      brand: ''
     };
     this.handleInput = this.handleInput.bind(this)
+    this.sendInfo = this.sendInfo.bind(this) 
   }
 
   handleInput({target: {name, value}}) {
-    this.setState({
-      [name]: value
-    })    
-  }
-
-  addCard(event) {
-    event.preventDefault()    
-    const { creditCardNumber, userName, expMonth, expYear} = this.state
+    let { creditCardNumber, brand} = this.state
     let numberSlice = creditCardNumber.slice(0,2)
-    let brand
     if (numberSlice >= 40 && numberSlice <= 49){
       brand = "Visa"
     }
     if (numberSlice >=51 && numberSlice <= 55){
       brand = "Mastercard"
-    } 
-    const card = {
-      creditCardNumber,
-      userName,
-      expMonth,
-      expYear,
-      brand
     }
-    this.props.handlerNewCard(card)
+    this.setState({
+      [name]: value,
+      brand
+    }, this.sendInfo)    
   }
 
+  sendInfo() {
+    this.props.handleInfo(this.state)
+  }
+
+
   render() {
-    const { creditCardNumber, userName, expMonth, expYear} = this.state      
+    const { creditCardNumber, userName, expMonth, expYear } = this.state  
     return (
       <div>
-        <form>            
+        <form className='creditCard-formContainer'>            
           <input
+            className='ccNumber'
             value={creditCardNumber}
             onChange={this.handleInput}
-            placeholder={"Credit Card number"}
-            name={"creditCardNumber"}
+            placeholder={'Credit Card number'}
+            name={'creditCardNumber'}
           />
           <input
+            className='ccName'
             value={userName}
             onChange={this.handleInput}
             placeholder={"Name"}
             name={"userName"}
           />
           <input
+            className='ccMonth'
             value={expMonth}
             onChange={this.handleInput}
             placeholder={"Expiration Month"}
             name={"expMonth"}
           />
-          <input
+          <input 
+            className='ccYear'
             value={expYear}
             onChange={this.handleInput}
             placeholder={"Expiration Year"}
@@ -72,6 +71,6 @@ export default class NewCreditCard extends Component {
           />
         </form>
       </div>
-    );
+    )
   }
 }

@@ -20,17 +20,52 @@ export default class Notes extends Component {
     this.handlerNewNote = this.handlerNewNote.bind(this);
   }
 
+  componentDidMount() {
+    fetch('https://reactsessions-ac545.firebaseio.com/.json') //hace peticion a servidor (url, objeto)
+    .then(response => response.json())
+    .then(({notes}) => {
+      var notesArray = []
+      for (let key in notes) {
+        notesArray.push({
+          key,
+          title: notes[key]['title'],
+          content: notes[key]['content']
+        })
+      }
+      this.setState({
+        notes: notesArray
+      })
+    })
+
+  }
+
   _renderNotes() {
     const { notes } = this.state;
-    return notes.map(({ title, content }) => {
-      return <Note title={title} content={content} />;
+    return notes.map(({ key, title, content }) => {
+      return <Note key={key} title={title} content={content} />;
     });
   }
 
+  
+
   handlerNewNote(note) {
-    const { notes } = this.state
-    this.setState({
-      notes: [...notes, note]
+    fetch(
+      'https://reactsessions-ac545.firebaseio.com/notes.json/',
+      {
+        method: 'POST',
+        body: JSON.stringify(note),
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }
+    )
+    .then(response => response.json())
+    .then(({name}) => {
+      const { notes } = this.state
+      note['key'] = name
+      this.setState({
+        notes: [...notes, note]
+      })
     })
   }
 

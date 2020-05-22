@@ -1,0 +1,73 @@
+.creditCard-bigcontainer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.CreditCard-container- {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  width: 400px;
+  height: 200px;
+  margin-right: 50px;
+}
+
+.CreditCard-container-Visa {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  width: 400px;
+  height: 200px;
+  background-color: blue;
+  margin-right: 50px;
+}
+
+.CreditCard-container-Mastercard {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  width: 400px;
+  height: 200px;
+  background-color: red;
+  margin-right: 50px;
+}
+
+.creditCard-formContainer {  
+  display: flex;
+  flex-direction: column;
+}
+
+.creditCard-formContainer input{  
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 300px;
+  height: 20px;
+}
+
+.Number-container{
+  margin-top: 80px;
+  padding: 0 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.user-container{
+  font-family: 'Courier New', Courier, monospace;
+  width: 70%;
+  font-size: 18px;
+}
+
+.Date-container{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nameDate-container {
+  display: flex;
+}
