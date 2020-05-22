@@ -9,6 +9,7 @@ import {
 
 import Home from './pages/Home'
 import Card from './pages/Card'
+import Clock from './pages/Clock'
 import Notes from './pages/Notes'
 import Menu from './pages/Menu'
 import CreditCard from './pages/CreditCard'
@@ -27,6 +28,9 @@ export default class App extends Component {
             </Route>
             <Route exact path="/cards">
               <Card />
+            </Route>
+            <Route exact path="/clock">
+              <Clock />
             </Route>
             <Route exact path="/notes">
               <Notes />
